@@ -75,8 +75,8 @@ function _toConsumableArray(firstPassedArray){
   pause.addEventListener("click",function(){
     ticking ? (ticking = !1, clearInterval(interval), this.innerText="resume") : 
     (ticking = !0, interval = timer(),this.innerText="pause"),
-    [].concat(_toConsumableArray(document.getElementsByTagName("button"))).forEach(function(a){
-      "pause"!==a.id&&(a.disabled=!ticking)
+    [].concat(_toConsumableArray(document.getElementsByTagName("button"))).forEach(function(didYouHitMyButton){
+      "pause"!==didYouHitMyButton.id&&(didYouHitMyButton.disabled=!ticking)
      })
   }),
 
